@@ -1,8 +1,11 @@
 # Megaline Plan Profitability Analysis: #
 
 ## Project Overview: ##
-Analyzed customer usage data to determine which prepaid plan—Surf or Ultimate—generates more revenue for Megaline. Using a dataset of 500 clients and their monthly activity (calls, texts, and data usage), we performed a statistical and financial analysis to identify the more profitable plan based on user behavior.
-**Goal:** Recommend the most profitable plan based on user activity and revenue, supporting Megaline’s data-driven decision-making.
+Analyzed customer usage data to determine which prepaid plan—Surf or Ultimate—generates more revenue for Megaline. Using a dataset of 500 clients and their monthly activity (calls, texts, and data usage), performed statistical and financial analysis to identify the more profitable plan based on user behavior.
+
+**Goal:**
+Recommend the most profitable plan based on user activity and revenue, supporting Megaline’s data-driven decision-making.
+
 **Business Context:**
 Megaline rounds seconds up to minutes, and megabytes to gigabytes. For calls, each individual call is rounded up: even if the call lasted just one second, it will be counted as one minute. For web traffic, individual web sessions are not rounded up. Instead, the total for the month is rounded up. E.g. if someone uses 1025 megabytes this month, they will be charged for 2 gigabytes.
 
@@ -24,19 +27,19 @@ Megaline rounds seconds up to minutes, and megabytes to gigabytes. For calls, ea
 
 ## Methods and Implementation: ## 
 - Data Preprocessing & EDA:
-  .Loaded multiple datasets; cleaned and corrected data types, formatting errors, and duplicates.
-  .Consolidated usage data to calculate monthly usage per user for calls, texts, and internet.
+  - Loaded multiple datasets; cleaned and corrected data types, formatting errors, and duplicates.
+  - Consolidated usage data to calculate monthly usage per user for calls, texts, and internet.
 - Feature Engineering:
-  .Created custom revenue calculation functions based on Megaline’s pricing rules.
-  .Aggregated monthly revenue per user.
+  - Created custom revenue calculation functions based on Megaline’s pricing rules.
+  - Aggregated monthly revenue per user.
 - Statistical Analysis:
-  .Described user behavior (average usage, distribution by plan and region).
-  .Plotted distributions and trends using Matplotlib and Seaborn.
-  .Calculated means, variances, standard deviations of monthly revenue.
+  - Described user behavior (average usage, distribution by plan and region).
+  - Plotted distributions and trends using Matplotlib and Seaborn.
+  - Calculated means, variances, standard deviations of monthly revenue.
 - Hypothesis Tests:
-  .Compared average revenue between Surf and Ultimate users.
-  .Compared average revenue between NY/NJ users and users from other regions.
-  .Used two-sample t-tests to determine statistical significance.
+  - Compared average revenue between Surf and Ultimate users.
+  - Compared average revenue between NY/NJ users and users from other regions.
+  - Used two-sample t-tests to determine statistical significance.
 
 ## Tools Used: ##
 - Python: pandas, numpy, scipy, matplotlib, seaborn
